@@ -29,14 +29,54 @@ const createElement = <h1>Hello from JSX!</h1>;
 
 // root.render(createElement);
 
-function MainContent() {
-  return <h1>React is Great!</h1>;
-}
+//1st custom element
+// function MainContent() {
+//   return <h1>React is Great!</h1>;
+// }
 
-root.render(
-  <div>
-    <MainContent />
-  </div>
-);
+// root.render(
+//   <div>
+//     <MainContent />
+//   </div>
+// );
+
+// import { createRoot } from "react-dom/client"
+// const root = createRoot(document.getElementById("root"))
+
+// root.render(
+//     <h1>Hello, React!</h1>
+// )
+
+/* 
+Challenge - recreate the above line of code in vanilla JS by creating and
+appending an h1 to our div#root (without using innerHTML).
+
+- Create a new h1 element (createElement)
+- Give it some textContent
+- Give it a class name of "header"
+- append it as a child (using `appendChild`) of the div#root
+
+Don't use innerHTML to accomplish any of this.
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+const element = document.getElementById("div1");
+element.appendChild(para);
+
+element.className = "myStyle";
+    
+*/
+
+// Vanila DOM
+const h1 = document.createElement("h1");
+const text = document.createTextNode("This is imparative coding");
+h1.className = "header";
+h1.appendChild(text);
+
+// const root = document.getElementById("root");
+root.appendChild(h1);
+
+// root.render(<h1 className="header">Declarative React Coding</h1>);
 
 export default App;
