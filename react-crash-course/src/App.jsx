@@ -20,6 +20,10 @@
 import { createRoot } from "react-dom/client";
 
 const root = createRoot(document.getElementById("root"));
-root.render(<h1>Hello, React!</h1>);
+// root.render(<h1>Hello, React!</h1>);
+const createElement = <h1>Hello from JSX!</h1>;
 
+console.log(createElement);
+
+root.render(createElement);
 export default App;
