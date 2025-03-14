@@ -69,14 +69,33 @@ element.className = "myStyle";
 */
 
 // Vanila DOM
-const h1 = document.createElement("h1");
-const text = document.createTextNode("This is imparative coding");
-h1.className = "header";
-h1.appendChild(text);
+// const h1 = document.createElement("h1");
+// const text = document.createTextNode("This is imparative coding");
+// h1.className = "header";
+// h1.appendChild(text);
 
 // const root = document.getElementById("root");
-root.appendChild(h1);
+//root.appendChild(h1);
 
 // root.render(<h1 className="header">Declarative React Coding</h1>);
+
+// static page
+
+// import { createRoot } from "react-dom/client"
+// const root = createRoot(document.getElementById("root"))
+
+root.render(
+  <main>
+    <img src="react-logo.png" width="40px" alt="React logo" />
+    <h1>Fun facts about React!</h1>
+    <ul>
+      <li>Was first release in 2013</li>
+      <li>Was originally created by Jordan Walke</li>
+      <li>Has well over 200K stars on GitHub</li>
+      <li>Is maintained by Meta</li>
+      <li>Powers thousands of enterprise apps, including mobile apps</li>
+    </ul>
+  </main>
+);
 
 export default App;
