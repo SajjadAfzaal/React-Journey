@@ -16,19 +16,20 @@
 
 // export default App;
 
+//1.
 // 1st react code
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 
-const root = createRoot(document.getElementById("root"));
-// root.render(<h1>Hello, React!</h1>);
+// const root = createRoot(document.getElementById("root"));
+//  root.render(<h1>Hello, React!</h1>);
 
+//2.
 // 1st jsx snippet
-const createElement = <h1>Hello from JSX!</h1>;
-
+// const createElement = <h1>Hello from JSX!</h1>;
 // console.log(createElement);
-
 // root.render(createElement);
 
+//3.
 //1st custom element
 // function MainContent() {
 //   return <h1>React is Great!</h1>;
@@ -40,6 +41,7 @@ const createElement = <h1>Hello from JSX!</h1>;
 //   </div>
 // );
 
+//4. 1.
 // import { createRoot } from "react-dom/client"
 // const root = createRoot(document.getElementById("root"))
 
@@ -47,6 +49,7 @@ const createElement = <h1>Hello from JSX!</h1>;
 //     <h1>Hello, React!</h1>
 // )
 
+//5.
 /* 
 Challenge - recreate the above line of code in vanilla JS by creating and
 appending an h1 to our div#root (without using innerHTML).
@@ -68,7 +71,7 @@ element.className = "myStyle";
     
 */
 
-// Vanila DOM
+// Vanila DOM Challenge
 // const h1 = document.createElement("h1");
 // const text = document.createTextNode("This is imparative coding");
 // h1.className = "header";
@@ -79,10 +82,11 @@ element.className = "myStyle";
 
 // root.render(<h1 className="header">Declarative React Coding</h1>);
 
+//6.
 // static page
 
-// import { createRoot } from "react-dom/client"
-// const root = createRoot(document.getElementById("root"))
+import { createRoot } from "react-dom/client";
+const root = createRoot(document.getElementById("root"));
 
 root.render(
   <main>
