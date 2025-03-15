@@ -132,13 +132,13 @@ const root = createRoot(document.getElementById("root"));
 
 function Header() {
   return (
-    <header>
+    <header className="head">
       <img src={logo} width="40px" alt="React logo" />
       <nav>
-        <ul>
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
+        <ul className="nav-list">
+          <li className="nav-list-item">Pricing</li>
+          <li className="nav-list-item">About</li>
+          <li className="nav-list-item">Contact</li>
         </ul>
       </nav>
     </header>
