@@ -85,27 +85,86 @@ element.className = "myStyle";
 //6.
 // static page
 
+// import { createRoot } from "react-dom/client";
+// const root = createRoot(document.getElementById("root"));
+
+// root.render(
+//   //React()
+//   <React />
+// );
+
+// function React() {
+//   return (
+//     <main>
+//       <img src="react-logo.png" width="40px" alt="React logo" />
+//       <h1>Fun facts about React!</h1>
+//       <ul>
+//         <li>Was first release in 2013</li>
+//         <li>Was originally created by Jordan Walke</li>
+//         <li>Has well over 200K stars on GitHub</li>
+//         <li>Is maintained by Meta</li>
+//         <li>Powers thousands of enterprise apps, including mobile apps</li>
+//       </ul>
+//     </main>
+//   );
+// }
+
+//7. challenge
 import { createRoot } from "react-dom/client";
+import { Fragment } from "react";
 const root = createRoot(document.getElementById("root"));
 
-root.render(
-  //React()
-  <React />
-);
+/** Challenge:
+ * Move the `main` element into its own component called "MainContent"
+ * and render that component inside the Page component.
+ *
+ * Do the same with the `footer` element, moving it into a new
+ * component called "Footer"
+ */
 
-function React() {
+function Header() {
+  return (
+    <header>
+      <img src="react-logo.png" width="40px" alt="React logo" />
+    </header>
+  );
+}
+
+function MainContent() {
   return (
     <main>
-      <img src="react-logo.png" width="40px" alt="React logo" />
-      <h1>Fun facts about React!</h1>
-      <ul>
-        <li>Was first release in 2013</li>
-        <li>Was originally created by Jordan Walke</li>
-        <li>Has well over 200K stars on GitHub</li>
-        <li>Is maintained by Meta</li>
-        <li>Powers thousands of enterprise apps, including mobile apps</li>
-      </ul>
+      <h1>Reason I am excited to learn React</h1>
+      <ol>
+        <li>
+          React is a popular library, so I will be able to fit in with all the
+          coolest devs out there! 😎
+        </li>
+        <li>
+          I am more likely to get a job as a front end developer if I know React
+        </li>
+      </ol>
     </main>
   );
 }
+
+function Footer() {
+  return (
+    <footer>
+      <small>© 2024 Ziroll development. All rights reserved.</small>
+    </footer>
+  );
+}
+
+function Page() {
+  return (
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
+  );
+}
+
+root.render(<Page />);
+
 export default App;
