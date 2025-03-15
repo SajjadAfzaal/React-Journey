@@ -111,7 +111,8 @@ element.className = "myStyle";
 
 //7. challenge
 import { createRoot } from "react-dom/client";
-import { Fragment } from "react";
+//import { Fragment } from "react";
+import logo from "./react-logo.png";
 const root = createRoot(document.getElementById("root"));
 
 /** Challenge:
@@ -122,10 +123,24 @@ const root = createRoot(document.getElementById("root"));
  * component called "Footer"
  */
 
+/**
+ * Challenge:Header
+ *
+ * - Add a `nav` > `ul` > `li` (x3). The 3 items should say:
+ *   "Pricing", "About", and "Contact"
+ */
+
 function Header() {
   return (
     <header>
-      <img src="react-logo.png" width="40px" alt="React logo" />
+      <img src={logo} width="40px" alt="React logo" />
+      <nav>
+        <ul>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
     </header>
   );
 }
