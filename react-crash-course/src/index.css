@@ -149,6 +149,9 @@ nav > span {
 }
 main {
   padding: 60px 30px;
+  background-image: url("/react-logobg.png");
+  background-repeat: no-repeat;
+  background-position: right 70%;
 }
 
 main > h1 {
@@ -165,3 +168,23 @@ main > h1 {
   padding-block: 10px;
   line-height: 19px;
 }
+
+.facts-list > li::marker {
+  color: #61dafb;
+  font-size: 1.5rem;
+}
+
+/* 
+Challenge: Place the gray react logo in the background
+
+Don't use an `img` element, but rather set it as the
+`background-image` of the `main` element.
+
+Hint: you'll need to use the following properties:
+- background-image: url(...)
+- background-repeat
+- background-position
+
+(Or the shorthand `background` property with values for all
+those other properties)
+*/
