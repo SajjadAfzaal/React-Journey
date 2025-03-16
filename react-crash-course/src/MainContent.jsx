@@ -1,5 +1,3 @@
-import logo from "./react-logo.png";
-
 export default function MainContent() {
   return (
     <main>

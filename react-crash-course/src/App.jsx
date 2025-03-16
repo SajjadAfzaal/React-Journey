@@ -98,25 +98,25 @@ element.className = "myStyle";
 //     <main>
 //       <img src="react-logo.png" width="40px" alt="React logo" />
 //       <h1>Fun facts about React!</h1>
-//       <ul>
-//         <li>Was first release in 2013</li>
-//         <li>Was originally created by Jordan Walke</li>
-//         <li>Has well over 200K stars on GitHub</li>
-//         <li>Is maintained by Meta</li>
-//         <li>Powers thousands of enterprise apps, including mobile apps</li>
-//       </ul>
+// <ul>
+//   <li>Was first release in 2013</li>
+//   <li>Was originally created by Jordan Walke</li>
+//   <li>Has well over 200K stars on GitHub</li>
+//   <li>Is maintained by Meta</li>
+//   <li>Powers thousands of enterprise apps, including mobile apps</li>
+// </ul>
 //     </main>
 //   );
 // }
 
 //7. challenge
-import { createRoot } from "react-dom/client";
-//import { Fragment } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import MainContent from "./MainContent";
+// import { createRoot } from "react-dom/client";
+// //import { Fragment } from "react";
+// import Header from "./Header";
+// import Footer from "./Footer";
+// import MainContent from "./MainContent";
 
-const root = createRoot(document.getElementById("root"));
+// const root = createRoot(document.getElementById("root"));
 
 /** Challenge:
  * Move the `main` element into its own component called "MainContent"
@@ -138,16 +138,48 @@ const root = createRoot(document.getElementById("root"));
  * separate files.
  */
 
-function Page() {
+// function Page() {
+//   return (
+//     <>
+//       <Header />
+//       <MainContent />
+//       <Footer />
+//     </>
+//   );
+// }
+
+// root.render(<Page />);
+
+//8. Challenge Static page app
+
+/**
+Challenge: Project setup
+
+- Create an App component in a separate App.jsx file which is a sibling
+  to this index.jsx file.
+- Create a `components` folder
+- Create the following components in separate files inside
+  the components folder. In each one, just render an `h1` 
+  with the name of the component (e.g. return <h1>Navbar goes here</h1>):
+    - Navbar
+    - Main
+- Have App component import and render the Navbar and Main components
+- Import and render the App component inside of index.jsx using ReactDOM
+    - At this point you should have your "Navbar goes here" etc. showing up
+      in the mini-browser.
+- Go to Google fonts and get the "Inter" font with weights 400, 600, and 700.
+  Put the `<links />` to those fonts ABOVE the style.css link in index.html.
+  You may need to do some extra research to figure out how this 
+  works if you haven't done it before.
+*/
+import { Navbar } from "./components/Navbar";
+import { MainComponent } from "./components/MainComponent";
+
+export default function App() {
   return (
     <>
-      <Header />
-      <MainContent />
-      <Footer />
+      <Navbar />
+      <MainComponent />
     </>
   );
 }
-
-root.render(<Page />);
-
-export default App;
